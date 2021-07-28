@@ -1,0 +1,43 @@
+<html>
+<head>
+    
+    <style>
+        body {
+            background-color: rosybrown;
+            color: darkslateblue;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .pages{
+            text-align: right;
+            height: 20px;
+        }
+        .urls{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kunal Sikka's Portfolio</h2>
+    <div class="pages">
+        <a href="{{url_for('about_page')}}">About</a>
+        <a href="{{url_for('blog_page')}}">Projects</a>
+        <a href="{{url_for('contact_page')}}">Contact</a>
+        <a href="{{url_for('home_page')}}">Home</a>
+
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <h2 style=" text-align: center; color: black;">{{msg}}</h2>
+            {% endfor %}
+        {% endif %}
+    {% endwith%}
+{% block code %}
+
+{% endblock %}
+</body>
+</html>

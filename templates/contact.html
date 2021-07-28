@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+    {% block code %}
+<head>
+    <title>Contact Page</title>
+</head>
+<h3>Contact</h3>
+<br>
+<br>
+<br>
+<p>If you have any query or want to ask me anything about my projects, type in your details below along with your question.</p>
+<br>
+<br>
+<div class="urls">
+    <form method="POST" class="form-register" style="color: white">
+        {{form.hidden_tag()}}
+        {{form.name.label()}}
+        {{form.name(class="form-control", placeholder="Enter your name")}}
+        <br><br>
+        {{form.email.label()}}
+        {{form.email(placeholder = "Enter your Email Address")}}
+        <br><br>
+        {{form.Message.label()}}
+        {{form.Message(placeholder = "Please provide your information here", size = "50")}}
+        <br><br>
+        <br>
+        {{form.submit(style="background-color: lightblue")}}
+    </form>
+    <footer>
+        <a href="https://www.instagram.com/kunal_sikka77/">
+            <img src="http://1000logos.net/wp-content/uploads/2017/02/Emblem-Instagram.jpg" alt="insta" height="25" width="25" align="right">
+        </a>
+        <a href="mailto:kunalsikka10500@gmail.com">
+            <img src="https://centaur-wp.s3.eu-central-1.amazonaws.com/creativereview/prod/content/uploads/2020/10/GoogleWorkspaceGmail-logo-CR-featured.gif" alt="gmail" height="25" width="25" align="right">
+        </a>
+        <a href="https://www.facebook.com/kunal.sikka.96/">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.YiMfOIxX-2Mxz_utvZ86zwHaHa&pid=Api&P=0&w=300&h=300" alt="fb" height="25" width="25" align="right">
+        </a>
+    </footer>
+</div>
+{% endblock %}
