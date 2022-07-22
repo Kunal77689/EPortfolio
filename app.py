@@ -47,3 +47,6 @@ def contact_page():
         for msg in form.errors.values():
             flash(msg)
     return render_template('contact.html', form=form)
+
+if __name__ == "main":
+    app.run()
